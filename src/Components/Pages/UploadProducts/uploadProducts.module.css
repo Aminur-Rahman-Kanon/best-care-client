@@ -1,0 +1,135 @@
+.uploadProductsContainer {
+    width: 100%;
+    margin: 30px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    font-size: 13px;
+    text-align: left;
+}
+
+.fieldsetGroup {
+    width: 70%;
+    min-width: 500px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.fieldset {
+    width: 100%;
+    padding: 0;
+    padding: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid lightgrey;
+}
+
+.select {
+    width: 300px;
+    height: 25px;
+}
+
+.input {
+    width: 295px;
+    height: 25px;
+    border: 1px solid lightgray;
+    padding: 0;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+.color {
+    margin: 5px 0;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.textarea {
+    width: 295px;
+    height: 100px;
+    padding-left: 5px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.colorInput {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.submitBtn {
+    width: 200px;
+    height: 30px;
+    border: 1px solid rgb(55, 55, 55);
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: white;
+    color: rgb(55, 55, 55);
+}
+
+.submitBtn:hover {
+    background-color: rgb(55, 55, 55);
+    color: white;
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.submitBtn:disabled:hover {
+    background-color: white;
+    color: rgb(55, 55, 55);
+}
+
+@media (max-width: 550px) {
+    .fieldsetGroup {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .select, .input, .textarea {
+        width: 65%;
+    }
+
+    .input.color {
+        width: 100%;
+    }
+
+    .colorInput {
+        width: 65%;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 450px) {
+    /* .input, .textarea, .select {
+        width: calc(50% - 5px);
+    } */
+}

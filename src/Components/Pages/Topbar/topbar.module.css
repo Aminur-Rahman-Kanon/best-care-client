@@ -1,0 +1,83 @@
+.topbarContainer {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.topbarItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginLink {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(55, 55, 55);
+    transition: all 0.2s ease-out;
+}
+
+.loginLink:hover {
+    color: rgba(224, 118, 24, 1);
+}
+
+.loggedInContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user {
+    width: 40px;
+}
+
+.adminContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.adminText {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.logoutBtn {
+    width: 50px;
+    height: 20px;
+    border: 1px solid rgb(55, 55, 55);
+    background-color: rgb(55, 55, 55);
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.logoutBtn:hover {
+    background-color: black;
+}
+
+.drawtoggleContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .drawtoggleContainer {
+        display: flex;
+    }
+
+    .topbarItem {
+        display: none;
+    }
+}

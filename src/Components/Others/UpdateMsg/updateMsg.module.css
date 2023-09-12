@@ -1,0 +1,15 @@
+.updateMsgContainer {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.updateMsgH4 {
+    margin: 5px;
+    font-size: 13px;
+    color: white;
+}

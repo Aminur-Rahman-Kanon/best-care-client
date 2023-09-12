@@ -1,0 +1,33 @@
+.navbarLists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navItem {
+    text-decoration: none;
+    color: rgb(55, 55, 55);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.navItem.active {
+    color: #2b8102;
+}
+
+@media (max-width: 600px) {
+    .navbarLists {
+        margin-top: 20px;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .navbarList {
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,29 @@
+.statusMsgContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.productContainerH4 {
+    margin: 5px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.actionPromptBtn {
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid rgb(55, 55, 55);
+    color: rgb(55, 55, 55);
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.actionPromptBtn:hover {
+    background-color: rgb(55, 55, 55);
+    color: white;
+}

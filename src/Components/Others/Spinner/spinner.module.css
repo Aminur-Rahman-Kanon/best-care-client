@@ -1,0 +1,22 @@
+.spinnerContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    width: 150px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.spinnerText {
+    font-size: 13px;
+    color: rgb(55, 55, 55);
+    margin-top: 10px;
+}

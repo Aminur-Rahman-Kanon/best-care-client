@@ -1,0 +1,51 @@
+.messageContainerMain {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 600;
+    background-color: white;
+    width: 350px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px 2px lightgray;
+    overflow: hidden;
+}
+
+.displayMessageContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageH4 {
+    margin: 5px 0;
+}
+
+.messageP {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+.messageBtn {
+    width: 95%;
+    height: 30px;
+    border: 1px solid rgb(55, 55, 55);
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(55, 55, 55);
+    cursor: pointer;
+    margin: 15px 0 10px 0;
+    font-size: 13px;
+}
+
+.messageBtn:hover {
+    background-color: rgb(55, 55, 55);
+    color: white;
+}
