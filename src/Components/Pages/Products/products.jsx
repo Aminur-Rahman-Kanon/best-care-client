@@ -5,6 +5,7 @@ import cookies from '../../Others/Cookies/cookies';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 import Backdrop from '../../Others/Backdrop/backdrop';
+import { category } from '../../Others/Data/data';
 
 function Products() {
 
@@ -12,34 +13,29 @@ function Products() {
 
     const cookie = cookies.get('token');
 
-    const [products, setProducts] = useState({});
+    const [products, setProducts] = useState([]);
 
     const [sidePanel, setSidePanel] = useState(false);
 
     const [backdrop, setBackdrop] = useState(false);
 
-    const [category, setcategory] = useState(() => {
-        if (params.productsId){
-            return params.productsId;
-        }
-        else {
-            return 'allProducts'
-        }
-    });
-
     useEffect(() => {
-        fetch('https://bes-care-server.onrender.com/fetch-products').then(res => res.json()).then(data => {
+        fetch(`https://bes-care-server.onrender.com/fetch-category/${params.productsId}`).then(res => res.json()).then(data => {
+            console.log(data);
             if (data.data){
                 setProducts(data.data);
             }
         }).catch(err => console.log(err));
     }, []);
 
+    const categoryContainer = category.map(item => <a key={item} href={`/products/${item}`} className={params.productsId === item ? `${styles.category} ${styles.active}` : styles.category}
+    >{item}</a>)
+
     let displayProducts;
     console.log(products);
 
-    if (Object.keys(products).length){
-        displayProducts = products[Object.keys(products).filter(item => item === category)[0]].map(item => <Link to={`/products/${item.title}`} key={item._id} className={styles.product}>
+    if (products.length){
+        displayProducts = products.map(item => <Link to={`/product/${item.title}`} key={item._id} className={styles.product}>
             <div className={styles.productImgContainer}>
                 <img src={item.img[Object.keys(item.img)[0]]} alt="img" className={styles.productImg} />
             </div>
@@ -71,30 +67,15 @@ function Products() {
                 <FontAwesomeIcon icon={faList}/>
             </div>
             <div className={sidePanel ? `${styles.categoryContainer} ${styles.on}` : styles.categoryContainer}>
-                <div className={category === 'hotDealsProducts' ? `${styles.category} ${styles.active}` : styles.category}
-                     onClick={() => {
-                        setcategory('hotDealsProducts');
-                        toggleSidepanel();
-                    }}
-                     >Hot Deals</div>
-                <div className={category === 'popularProducts' ? `${styles.category} ${styles.active}` : styles.category}
-                     onClick={() => {
-                        setcategory('popularProducts');
-                        toggleSidepanel();
-                     }}
-                     >Popular Products</div>
-                <div className={category === 'newArrivals' ? `${styles.category} ${styles.active}` : styles.category}
-                     onClick={() => {
-                        setcategory('newArrivals');
-                        toggleSidepanel();
-                    }}
-                     >New Arrivals</div>
-                <div className={category === 'allProducts' ? `${styles.category} ${styles.active}` : styles.category}
-                     onClick={() => {
-                        setcategory('allProducts')
-                        toggleSidepanel();
-                    }}
-                     >All products</div>
+                <a href='/products/all-products' className={params.productsId === 'all-products' ? `${styles.category} ${styles.active}` : styles.category}
+                    >All products</a>
+                <a href='/products/hot-deals' className={params.productsId === 'hot-deals' ? `${styles.category} ${styles.active}` : styles.category}
+                    >Hot Deals</a>
+                <a href='/products/popular-products' className={params.productsId === 'popular-products' ? `${styles.category} ${styles.active}` : styles.category}
+                    >Popular Products</a>
+                <a href='/products/new-arrivals' className={params.productsId === 'new-arrivals' ? `${styles.category} ${styles.active}` : styles.category}
+                    >New Arrivals</a>
+                {categoryContainer}
             </div>
             <div className={styles.productDisplayContainer}>
                 {displayProducts}

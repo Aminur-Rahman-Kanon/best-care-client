@@ -26,22 +26,22 @@ function Homepage() {
                 <div className={styles.rows}>
                     <div className={styles.header}>Hot Deals:</div>
                     <div className={styles.count}>{products.hotDealsProduct ? products.hotDealsProduct.length : 0}</div>
-                    <Link to="/products/hotDealsProducts" className={styles.checkBtn}>Check</Link>
+                    <Link to="/products/hot-deals" className={styles.checkBtn}>Check</Link>
                 </div>
                 <div className={styles.rows}>
                     <div className={styles.header}>Popular Products:</div>
                     <div className={styles.count}>{products.popularProducts ? products.popularProducts.length : 0}</div>
-                    <Link to="/products/popularProducts" className={styles.checkBtn}>Check</Link>
+                    <Link to="/products/popular-products" className={styles.checkBtn}>Check</Link>
                 </div>
                 <div className={styles.rows}>
                     <div className={styles.header}>New Arrivals:</div>
                     <div className={styles.count}>{products.newArrivals ? products.newArrivals.length : 0}</div>
-                    <Link to="/products/newArrivals" className={styles.checkBtn}>Check</Link>
+                    <Link to="/products/new-arrivals" className={styles.checkBtn}>Check</Link>
                 </div>
                 <div className={styles.rows}>
                     <div className={styles.header}>All Products:</div>
                     <div className={styles.count}>{products.allProducts ? products.allProducts.length : 0}</div>
-                    <Link to="/products/allProducts" className={styles.checkBtn}>Check</Link>
+                    <Link to="/products/all-products" className={styles.checkBtn}>Check</Link>
                 </div>
             </div>
         </section>

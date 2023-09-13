@@ -15,7 +15,7 @@ function Navbar() {
                 <a href="/upload-products" className={location.pathname === '/upload-products' ? `${styles.navItem} ${styles.active}` : styles.navItem}>Upload products</a>
             </li>
             <li className={styles.navbarList}>
-                <a href="/products" className={location.pathname === '/products' ? `${styles.navItem} ${styles.active}` : styles.navItem}>Products</a>
+                <a href="/products/all-products" className={location.pathname === '/products' ? `${styles.navItem} ${styles.active}` : styles.navItem}>Products</a>
             </li>
             <li className={styles.navbarList}>
                 <a href="#" className={location.pathname === '/others' ? `${styles.navItem} ${styles.active}` : styles.navItem}>Others</a>

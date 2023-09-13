@@ -44,7 +44,7 @@ function App() {
           <Route path='/upload-products' element={<UploadProducts />} />
           <Route path='/products' element={<Products />} />
           <Route path='/products/:productsId' element={<Products />} />
-          <Route path='/products/:product' element={<Product />} />
+          <Route path='/product/:product' element={<Product />} />
           <Route path='*' element={<DefaultRoute />} />
         </Routes>
     </div>

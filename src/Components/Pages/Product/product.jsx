@@ -21,13 +21,14 @@ function Product() {
                 },
                 body: JSON.stringify({ product: params.product })
             }).then(res => res.json()).then(data => {
+                console.log(data);
                 if (data.data) {
                     setProduct(data.data);
                     setProductTitle(data.data.title);
                 }
             }).catch(err => setError(true));
         }
-    }, [])
+    }, [params.product])
 
     const defaultDisplay = <div className={styles.defaultContainer}>
         <h4>No item</h4>
